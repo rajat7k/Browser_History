@@ -1,10 +1,5 @@
 
-.history-list-container{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-}
+
 .single-history-item{
     width: 100%;
     display: flex;
@@ -12,6 +7,11 @@
     align-items: center;
     height: 70px;
 }
+.item-time{
+    color: #475569;
+    font-size: 14px;
+}
+
 
 .item-main-container{
     display: flex;
@@ -20,6 +20,11 @@
     margin-left: 5%;
 
 }
+
+.item-description{
+    color: #64748b;
+}
+
 
 .item-logo{
     width: 20px;
@@ -37,5 +42,10 @@
 .item-heading{
     font-weight: 500;
     margin-right: 10px;
+    color: #475569;
 }
 
+.item-delete-icon{
+    border: 0px;
+    background-color: transparent;
+}

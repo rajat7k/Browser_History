@@ -1,0 +1,15 @@
+
+.main-container{
+    background-color: #f8fafc;
+    height: 100vh;
+}
+.history-list-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding:0 3% ;
+    border-radius: 8px;
+    box-shadow: 0.3em 0.3em 1em #ececec ;
+}

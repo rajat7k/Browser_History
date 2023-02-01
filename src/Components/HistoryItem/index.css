@@ -1,0 +1,41 @@
+
+.history-list-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+.single-history-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+.item-main-container{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left: 5%;
+
+}
+
+.item-logo{
+    width: 20px;
+
+}
+
+.item-name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5% 3%;
+}
+
+
+.item-heading{
+    font-weight: 500;
+    margin-right: 10px;
+}
+

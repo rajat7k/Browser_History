@@ -28,7 +28,8 @@
     border: 0px;
     border-left: 1px solid #ffffff;
     color: #ffffff;
-    padding: 7px;
+    height: 100%;
+    width: 100%;
 }
 .search-bar-input:focus{
     outline: none;

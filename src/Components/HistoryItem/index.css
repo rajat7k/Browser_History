@@ -48,4 +48,5 @@
 .item-delete-icon{
     border: 0px;
     background-color: transparent;
+    cursor: pointer;
 }

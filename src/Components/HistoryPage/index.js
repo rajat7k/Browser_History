@@ -13,13 +13,14 @@ export default class HistoryPage extends Component {
 
     deleteItem = (id) => {
         this.setState({ listToShow: this.state.listToShow.filter((obj) => obj.id !== id) });
+        this.setState({historyList:this.state.listToShow});
     }
 
     handleInput = (value) => {
         const newList = this.state.historyList;
         this.setState({
             listToShow: newList.filter(obj => {
-                return obj.title.includes(value);
+                return obj.title.toLowerCase().includes(value.toLowerCase());
             })
         });
     }
@@ -29,17 +30,12 @@ export default class HistoryPage extends Component {
             <div className="main-container">
 
                 <SearchBar handleInput={this.handleInput} />
-
-                <div className="history-list-container">
-
-                    {this.state.listToShow.length > 0 && this.state.listToShow.map((item) => (
-
+                {this.state.listToShow.length===0
+                ?<EmptyPage />
+                :<div className="history-list-container">{this.state.listToShow.map((item) => (
                         <HistoryList onclick={() => this.deleteItem(item.id)} item={item} />
-                    ))
-                    }
-                </div>
-                {this.state.listToShow.length === 0 && <EmptyPage />
-                }
+                    ))}</div>}
+
             </div>
         )
     }

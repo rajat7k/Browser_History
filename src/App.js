@@ -14,7 +14,7 @@ const initialHistoryList = [
     id: 1,
     timeAccessed: '05:45 PM',
     logoUrl: 'https://assets.ccbp.in/frontend/react-js/twitter-img.png',
-    title: 'Twitter. It’s what’s happening / Twitter',
+    title: 'Twitter. It’s what’s happening / Twitter Twitter. It’s what’s happening / Twitter Twitter. It’s what’s happening / Twitter Twitter. It’s what’s happening / Twitter',
     domainUrl: 'twitter.com',
   },
   {

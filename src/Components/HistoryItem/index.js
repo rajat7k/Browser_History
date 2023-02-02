@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import './index.css'
 export default class HistoryList extends Component {
     render() {
-
-        const item = this.props.item;
-        const deleteItem = this.props.onclick;
-        // console.log(this.props)
-        // console.log(deleteItem)
+            const {item, onclick} = this.props
         return (
             < div className="single-history-item" >
                 <p className='item-time'>{item.timeAccessed}</p>
@@ -18,7 +14,7 @@ export default class HistoryList extends Component {
                         <p className='item-description'> <span className='item-heading' >{item.title} </span> {item.domainUrl}</p>
                     </div>
                 </div>
-                <button onClick={deleteItem} className='item-delete-icon' > <img src="https://assets.ccbp.in/frontend/react-js/delete-img.png" alt="" /> </button>
+                <button onClick={onclick} className='item-delete-icon' > <img src="https://assets.ccbp.in/frontend/react-js/delete-img.png" alt="" /> </button>
             </div>
         )
     }

@@ -6,33 +6,40 @@ import './index.css'
 
 export default class HistoryPage extends Component {
 
-    state = {
-        listToShow: this.props.historyList,
-        historyList: this.props.historyList
-    };
+    constructor(props){
+        super(props)
+        this.listToShow= this.props.historyList
+        this.state = {
+            historyList: this.props.historyList
+        }
+    }
+
 
     deleteItem = (id) => {
-        this.setState({ listToShow: this.state.listToShow.filter((obj) => obj.id !== id) });
-        this.setState({historyList:this.state.listToShow});
+        this.listToShow=this.state.historyList.filter((obj) => obj.id !== id)
+        this.setState({historyList:this.listToShow});
+        console.log(id,this.listToShow,"<<<<delete>>>>")
     }
 
     handleInput = (value) => {
-        const newList = this.state.historyList;
-        this.setState({
-            listToShow: newList.filter(obj => {
-                return obj.title.toLowerCase().includes(value.toLowerCase());
-            })
-        });
+
+        console.log(value,this.listToShow,"<<<<handle input>>>>")
+        const newList = this.listToShow;
+        const currentUpdatedList=newList.filter(obj => {
+            return obj.title.toLowerCase().includes(value.toLowerCase());
+        })
+        this.setState({historyList: currentUpdatedList});
     }
 
     render() {
+        console.log(this.state.historyList,"render")
         return (
             <div className="main-container">
 
                 <SearchBar handleInput={this.handleInput} />
-                {this.state.listToShow.length===0
+                {this.state.historyList.length===0
                 ?<EmptyPage />
-                :<div className="history-list-container">{this.state.listToShow.map((item) => (
+                :<div className="history-list-container">{this.state.historyList.map((item) => (
                         <HistoryList onclick={() => this.deleteItem(item.id)} item={item} />
                     ))}</div>}
 
